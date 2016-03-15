@@ -37,7 +37,7 @@ font pango:DejaVu Sans Mono 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec urxvt
+bindsym $mod+Return exec terminator
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -48,6 +48,13 @@ bindsym $mod+d exec dmenu_run
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+#
+#
+
+# volume control
+bindsym $mod+period exec amixer set Master -q 5%+
+bindsym $mod+comma exec amixer set Master -q 5%-
+bindsym $mod+m exec amixer -q set Master toggle
 
 # change focus
 bindsym $mod+j focus left
